@@ -8,10 +8,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 import com.igor.cursomc.service.DbService;
+import com.igor.cursomc.service.EmailService;
+import com.igor.cursomc.service.MockEmailService;
 
 @Configuration
 @Profile("test")
-public class TesteConfig {
+public class TestConfig {
 
 	@Autowired
 	private DbService dbService;
@@ -22,4 +24,8 @@ public class TesteConfig {
 		return true;
 	}
 
+	@Bean
+	public EmailService emailService(){
+		return new MockEmailService();
+	}
 }
