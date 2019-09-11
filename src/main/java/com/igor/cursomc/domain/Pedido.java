@@ -136,26 +136,28 @@ public class Pedido implements Serializable {
 			return false;
 		return true;
 	}
-	
+
 	@Override
 	public String toString() {
-		NumberFormat nf = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 		StringBuilder builder = new StringBuilder();
-		builder.append("Pedido número: ");
+		NumberFormat nf = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
+		builder.append("Pedido numero: ");
 		builder.append(getId());
 		builder.append(", Instante: ");
 		builder.append(sdf.format(getInstante()));
 		builder.append(", Cliente: ");
 		builder.append(getCliente().getNome());
-		builder.append(", Situação do pagamento: ");
+		builder.append(", Situação de Pagamento: ");
 		builder.append(getPagamento().getEstado().getDescricao());
 		builder.append("\nDetalhes:\n");
-		for (ItemPedido ip : getItens()) {
+		for(ItemPedido ip: itens) {
 			builder.append(ip.toString());
 		}
-		builder.append("Valor total: ");
+		builder.append("Valor Total: ");
 		builder.append(nf.format(getValorTotal()));
 		return builder.toString();
 	}
+	
+	
 }
