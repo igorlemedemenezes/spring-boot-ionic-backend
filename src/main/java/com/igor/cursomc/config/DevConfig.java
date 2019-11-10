@@ -16,13 +16,13 @@ import com.igor.cursomc.service.SmtpEmailService;
 @Profile("dev")
 public class DevConfig {
 
-	@Autowired
+	/*@Autowired
 	private DbService dbService;
+	*/
+	//@Value("${spring.jpa.hibernate.ddl-auto}")
+	//private String strategy;
 	
-	@Value("${spring.jpa.hibernate.ddl-auto}")
-	private String strategy;
-	
-	@Bean
+	/*@Bean
 	public boolean instantiateDataBase() throws ParseException {
 		if(!"create".equals(strategy)) {
 			return false;
@@ -30,7 +30,7 @@ public class DevConfig {
 		
 		dbService.instantiateTestDataBase();
 		return true;
-	}
+	}*/
 	
 	@Bean
 	public EmailService emailService() {

@@ -120,15 +120,25 @@ public class DbService {
 		estadoRepository.saveAll(Arrays.asList(est1, est2));
 		cidadeRepository.saveAll(Arrays.asList(c1, c2, c3));
 		
-		Cliente cl1 = new Cliente(null, "Maria Silva", "igor.leme@hotmail.com", "36378912377", TipoCliente.PESSOAFISICA);
+		Cliente cl1 = new Cliente(null, "Igor Leme", "igor.leme@hotmail.com", "36378912377", TipoCliente.PESSOAFISICA);
 		cl1.getTelefones().addAll(Arrays.asList("27363323","254555852"));
+		
+		Cliente cl2 = new Cliente(null, "Graciele ", "graciele@hotmail.com", "84841515", TipoCliente.PESSOAFISICA);
+		cl2.getTelefones().addAll(Arrays.asList("27363323","254555852"));
+		
+		Cliente cl3 = new Cliente(null, "Gabriel", "gabriel@hotmail.com", "51818184", TipoCliente.PESSOAFISICA);
+		cl3.getTelefones().addAll(Arrays.asList("27363323","254555852"));
+		
+		Cliente cl4 = new Cliente(null, "Diego", "diegolofredo@hotmail.com", "51818184", TipoCliente.PESSOAJURIDICA);
+		cl4.getTelefones().addAll(Arrays.asList("27363323","254555852"));
+		
 		
 		Endereco e1 = new Endereco(null, "Rua Flores", "300", "Apto 303", "Jardim", "38220834", cl1, c1);
 		Endereco e2 = new Endereco(null, "Avenida Matos", "105", "Sala 800", "Centro", "38777012", cl1, c2);
 		
 		cl1.getEnderecos().addAll(Arrays.asList(e1, e2));
 		
-		clienteRepository.saveAll(Arrays.asList(cl1));
+		clienteRepository.saveAll(Arrays.asList(cl1, cl2, cl3, cl4));
 		enderecoRepository.saveAll(Arrays.asList(e1, e2));
 				
 		Pedido ped1 = new Pedido(null, sdf.parse("30/09/2017 10:32"), cl1, e1);
