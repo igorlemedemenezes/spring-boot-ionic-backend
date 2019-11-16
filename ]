@@ -1,0 +1,23 @@
+[33mcommit 3e5bc73a6bda5c4188fc30e0a54113c81e1a85a6[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;32migor[m[33m)[m
+Author: Igor Leme <grupoevu@gmail.com>
+Date:   Sat Nov 16 16:50:52 2019 -0300
+
+    Endpoint para fotos de usuarios cmo Multipart File
+
+[33mcommit 08f29e15977590f0bbee50a2b56c31b67a33b2d9[m[33m ([m[1;31morigin/igor[m[33m)[m
+Author: Igor Leme <grupoevu@gmail.com>
+Date:   Fri Nov 15 12:26:21 2019 -0300
+
+    Implementando o s3 da amazon para salvar imagens
+
+[33mcommit ed15e89dda450ad7c10b6876d273ec9893f22392[m
+Author: Igor Leme <grupoevu@gmail.com>
+Date:   Tue Nov 12 21:42:33 2019 -0300
+
+    Implementando Esqueci minha senha
+
+[33mcommit 79bfcdd3d04ec5e895d2e51cda33508d41ad4220[m
+Author: Igor Leme <grupoevu@gmail.com>
+Date:   Mon Nov 11 20:22:13 2019 -0300
+
+    Refresh token
