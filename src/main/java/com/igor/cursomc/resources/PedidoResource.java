@@ -1,4 +1,4 @@
-	package com.igor.cursomc.resources;
+package com.igor.cursomc.resources;
 
 import java.net.URI;
 
